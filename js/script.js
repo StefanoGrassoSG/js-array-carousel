@@ -15,8 +15,22 @@ for (let index = 0; index < imgList.length; index++) {
     const item = document.createElement('div');
     item.innerHTML = [element];
     document.querySelector('.items').append(item);
-    item.classList.add('img');
+    item.classList.add('img', 'active');
 
+    const previous = document.getElementById('back')
+
+    previous.addEventListener('click', function(e){
+
+        for (let index = 0; index < imgList.length; index++) {
+            const element = imgList[index];
+            item.classList.remove('active');
+            
+            
+            
+        }
+    })
 
     
+    
 }
+
