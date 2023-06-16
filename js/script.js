@@ -13,7 +13,10 @@ console.log(imgList)
 for (let index = 0; index < imgList.length; index++) {
     const element = imgList[index];
     const item = document.createElement('div');
-    item.innerHTML = [index];
-    document.querySelector('.items').appendChild(item);
+    item.innerHTML = [element];
+    document.querySelector('.items').append(item);
+    item.classList.add('img');
+
+
     
 }
