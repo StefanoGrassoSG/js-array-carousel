@@ -7,3 +7,48 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/****************
+    GENERAL
+****************/   
+
+.container {
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.items {
+    width: 700px;
+    height: 300px;
+    background-color: brown;
+    position: relative;
+}
+
+.previous, .next {
+    background-color: grey;
+    border-radius: 50%;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.previous {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 5px;
+}
+
+.next {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 5px;
+}
