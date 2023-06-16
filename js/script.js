@@ -9,28 +9,23 @@ const imgList = [
 ]
 
 console.log(imgList)
+let next = document.getElementById("go")
+
 
 for (let index = 0; index < imgList.length; index++) {
     const element = imgList[index];
     const item = document.createElement('div');
     item.innerHTML = [element];
     document.querySelector('.items').append(item);
-    item.classList.add('img', 'active');
-
-    const previous = document.getElementById('back')
-
-    previous.addEventListener('click', function(e){
-
-        for (let index = 0; index < imgList.length; index++) {
-            const element = imgList[index];
-            item.classList.remove('active');
-            
-            
-            
-        }
-    })
-
-    
-    
+    item.classList.add('img');   
 }
+
+let imgItems = document.getElementsByClassName('img');
+let firstItem = imgItems[0];
+firstItem.className += ' active';
+
+
+
+
+
 
