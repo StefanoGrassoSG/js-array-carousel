@@ -1,11 +1,11 @@
 //ARRAY MAIN
 
 const imgList = [
-    '<img src="img/01.webp" alt="">',
-    '<img src="img/02.webp" alt="">',
-    '<img src="img/03.webp" alt="">',
-    '<img src="img/04.webp" alt="">',
-    '<img src="img/05.webp" alt="">'
+    '<img src="img/paesaggio-1.webp" alt="">',
+    '<img src="img/paesaggio-2.webp" alt="">',
+    '<img src="img/paesaggio-3.webp" alt="">',
+    '<img src="img/paesaggio-4.webp" alt="">',
+    '<img src="img/paesaggio-5.webp" alt="">'
 ]
 
 console.log(imgList)
@@ -75,21 +75,23 @@ back.addEventListener('click', function() {
     }
 });
 */
+//////////////////////////////////////////////
 //ARRAY MINI IMAGES
+//////////////////////////////////////////////
 
 const miniImagesList = [
-    '<img src="img/01.webp" alt="">',
-    '<img src="img/02.webp" alt="">',
-    '<img src="img/03.webp" alt="">',
-    '<img src="img/04.webp" alt="">',
-    '<img src="img/05.webp" alt="">'
+    '<img src="img/paesaggio-1.webp" alt="">',
+    '<img src="img/paesaggio-2.webp" alt="">',
+    '<img src="img/paesaggio-3.webp" alt="">',
+    '<img src="img/paesaggio-4.webp" alt="">',
+    '<img src="img/paesaggio-5.webp" alt="">'
 ]
 
 for (let index = 0; index < miniImagesList.length; index++) {
     const element = miniImagesList[index];
     const item = document.createElement('div');
     item.innerHTML = [element];
-    document.querySelector('.mini-img-container').append(item);
+    document.querySelector('.mini-images').append(item);
     item.classList.add('mini-img');   
 }
 

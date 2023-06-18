@@ -13,7 +13,7 @@
 ****************/
 
 body {
-    background-color: black;
+    background-color: white;
 }
 
 .container {
@@ -27,8 +27,7 @@ body {
 
 .items-container {
     width: 70%;
-    height: 700px;
-    background-color: black;
+    height: 600px;
     position: relative;
 }
 
@@ -39,8 +38,7 @@ body {
 
 .mini-img {
     width: 100%;
-    height: calc(700px / 5);
-    border: 2px solid white;
+    height: calc(600px / 5);
     border-left: none;
     position: relative;
 }
@@ -69,6 +67,7 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    z-index: 3;
 }
 
 .previous {
@@ -90,7 +89,7 @@ body {
 .img {
     height: 100%;
     display: none;
-    border: 2px solid white;
+    border: 7px solid black;
 }
 
 .img > * {
@@ -105,5 +104,7 @@ body {
 
 .not-bright {
     filter: brightness(100%);
+    border: 7px solid black;
+    border-left: none;
 }
     
