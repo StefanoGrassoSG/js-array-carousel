@@ -27,51 +27,26 @@ firstItem.classList.add('active')
 
 next.addEventListener('click', function(){
 
-    let current = document.querySelector('.active')
-
-    if(current.classList.contains('active')){
-        imgItems[1].classList.add('active')
-        imgItems[0].classList.remove('active')
+    let current = document.querySelector('.active');
+    let nextItem = current.nextElementSibling;
+    if (!nextItem) {
+        nextItem = document.querySelector(" .img")
     }
 
-    if (current.classList.contains('active')) {
-        imgItems[1].classList.remove('active')
-        imgItems[2].classList.add('active')
-    }
-    if (current.classList.contains('active')) {
-        imgItems[2].classList.remove('active')
-        imgItems[3].classList.add('active')
-    }
-    if (current.classList.contains('active')) {
-        imgItems[3].classList.remove('active')
-        imgItems[4].classList.add('active')
-    }
-    
-
+    current.classList.remove("active");
+    nextItem.classList.add("active");
 })
 
 back.addEventListener('click', function(){
 
-    let current = document.querySelector('.active')
-
-    if(current.classList.contains('active')){
-        imgItems[3].classList.add('active')
-        imgItems[4].classList.remove('active')
+    let current = document.querySelector('.active');
+    let previousItem = current.previousElementSibling;
+    if (!previousItem) {
+        previousItem = imgItems[4];
     }
 
-    if (current.classList.contains('active')) {
-        imgItems[2].classList.add('active')
-        imgItems[3].classList.remove('active')
-    }
-    if (current.classList.contains('active')) {
-        imgItems[1].classList.add('active')
-        imgItems[2].classList.remove('active')
-    }
-    if (current.classList.contains('active')) {
-        imgItems[0].classList.add('active')
-        imgItems[1].classList.remove('active')
-    }
-
+    current.classList.remove("active");
+    previousItem.classList.add("active");
 })
 
 
