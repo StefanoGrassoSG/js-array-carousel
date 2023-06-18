@@ -32,9 +32,30 @@ body {
     position: relative;
 }
 
-.mini-img {
+.mini-img-container {
     width: 30%;
+    position: relative;
 }
+
+.mini-img {
+    width: 100%;
+    height: calc(700px / 5);
+    border: 2px solid white;
+    border-left: none;
+    position: relative;
+}
+
+.bright {
+    filter: brightness(50%)
+}
+
+.mini-img > * {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
 
 .items {
     width: 100%;
@@ -43,11 +64,11 @@ body {
 
 .previous, .next {
     background-color: grey;
-    border-radius: 50%;
     padding: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 50%;
 }
 
 .previous {
@@ -70,7 +91,6 @@ body {
     height: 100%;
     display: none;
     border: 2px solid white;
-    border-radius: 5px;
 }
 
 .img > * {
@@ -81,5 +101,9 @@ body {
 
 .active {
     display: block;
+}
+
+.not-bright {
+    filter: brightness(100%);
 }
     

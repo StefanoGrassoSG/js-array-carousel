@@ -77,5 +77,54 @@ back.addEventListener('click', function() {
 */
 //ARRAY MINI IMAGES
 
+const miniImagesList = [
+    '<img src="img/01.webp" alt="">',
+    '<img src="img/02.webp" alt="">',
+    '<img src="img/03.webp" alt="">',
+    '<img src="img/04.webp" alt="">',
+    '<img src="img/05.webp" alt="">'
+]
+
+for (let index = 0; index < miniImagesList.length; index++) {
+    const element = miniImagesList[index];
+    const item = document.createElement('div');
+    item.innerHTML = [element];
+    document.querySelector('.mini-img-container').append(item);
+    item.classList.add('mini-img');   
+}
+
+let allMini = document.querySelectorAll('.mini-img')
+
+for (let i = 0; i < allMini.length; i++) {
+    const element = allMini[i];
+    element.classList.add('bright')  
+}
 
 
+let miniItems = document.querySelectorAll('.mini-img');
+let firstMini = miniItems[0];
+firstMini.classList.add('not-bright')
+
+next.addEventListener('click', function(){
+    
+    let current = document.querySelector('.not-bright');
+    let nextItem = current.nextElementSibling;
+    if (!nextItem) {
+        nextItem = document.querySelector(" .bright")
+    }
+
+    current.classList.remove("not-bright");
+    nextItem.classList.add("not-bright");
+})
+
+back.addEventListener('click', function(){
+
+    let current = document.querySelector('.not-bright');
+    let previousItem = current.previousElementSibling;
+    if (!previousItem) {
+        previousItem = miniItems[4];
+    }
+
+    current.classList.remove("not-bright");
+    previousItem.classList.add("not-bright");
+})
