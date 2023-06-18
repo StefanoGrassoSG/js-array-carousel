@@ -1,4 +1,4 @@
-//ARRAY
+//ARRAY MAIN
 
 const imgList = [
     '<img src="img/01.webp" alt="">',
@@ -49,6 +49,33 @@ back.addEventListener('click', function(){
     previousItem.classList.add("active");
 })
 
+
+//SOLUTIONS WITH  CYCLE
+
+
+
+/*
+next.addEventListener('click', function() {
+    let current = document.querySelector('.active');
+    for (let index = 0; index <= 3; index++) {
+        if (current.classList.contains('active')) {
+            imgItems[index].classList.remove('active');
+            imgItems[index + 1].classList.add('active');
+        }
+    }
+});
+
+back.addEventListener('click', function() {
+    let current = document.querySelector('.active');
+    for (let index = 0; index <= 3; index++) {
+        if (current.classList.contains('active')) {
+            imgItems[index - 1].classList.remove('active');
+            imgItems[index - 1].classList.add('active');
+        }
+    }
+});
+*/
+//ARRAY MINI IMAGES
 
 
 

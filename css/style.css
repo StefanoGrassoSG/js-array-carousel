@@ -21,13 +21,19 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .items-container {
-    width: 1200px;
+    width: 70%;
     height: 700px;
     background-color: black;
     position: relative;
+}
+
+.mini-img {
+    width: 30%;
 }
 
 .items {
