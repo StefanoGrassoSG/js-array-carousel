@@ -36,17 +36,32 @@ let current = 0;
 const allItems = document.querySelectorAll('.img')
 next.addEventListener('click', function(){
 
-    allItems[current].classList.remove('active');
-    current++;
-    allItems[current].classList.add('active');
+    if(current < allItems.length - 1) {
+        allItems[current].classList.remove('active');
+        current++;
+        allItems[current].classList.add('active');
+    }
 
+    else {
+        allItems[current].classList.remove('active');
+        current = 0;
+        allItems[current].classList.add('active');
+    }
 })
 
 back.addEventListener('click', function(){
 
-    allItems[current].classList.remove('active');
-    current--;
-    allItems[current].classList.add('active');
+    if(current > 0) {
+        allItems[current].classList.remove('active');
+        current--;
+        allItems[current].classList.add('active');
+    }
+
+    else {
+        allItems[current].classList.remove('active');
+        current = 4;
+        allItems[current].classList.add('active');
+    }
 
 })
 
