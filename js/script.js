@@ -18,13 +18,31 @@ for (let index = 0; index < imgList.length; index++) {
     const item = document.createElement('div');
     item.innerHTML = [element];
     document.querySelector('.items').append(item);
-    item.classList.add('img');   
+    
+
+    if (index == 0) {
+        item.classList.add('img');   
+        item.classList.add('active');  
+    }
+
+    else {
+        item.classList.add('img');  
+    }
 }
 
-let imgItems = document.querySelectorAll('.img');
-let firstItem = imgItems[0];
-firstItem.classList.add('active')
 
+
+let current = document.querySelector('active');
+
+next.addEventListener('click', function(){
+
+    
+    
+    current++;
+    console.log(current, typeof current)
+})
+
+/* SOLUTIONS WITH SIBLING
 next.addEventListener('click', function(){
 
     let current = document.querySelector('.active');
@@ -48,6 +66,7 @@ back.addEventListener('click', function(){
     current.classList.remove("active");
     previousItem.classList.add("active");
 })
+*/
 
 
 //SOLUTIONS WITH  CYCLE
