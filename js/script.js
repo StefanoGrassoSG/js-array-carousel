@@ -30,17 +30,26 @@ for (let index = 0; index < imgList.length; index++) {
     }
 }
 
+/*SIMPLY SOLUTION*/
 
-
-let current = document.querySelector('active');
-
+let current = 0;
+const allItems = document.querySelectorAll('.img')
 next.addEventListener('click', function(){
 
-    
-    
+    allItems[current].classList.remove('active');
     current++;
-    console.log(current, typeof current)
+    allItems[current].classList.add('active');
+
 })
+
+back.addEventListener('click', function(){
+
+    allItems[current].classList.remove('active');
+    current--;
+    allItems[current].classList.add('active');
+
+})
+
 
 /* SOLUTIONS WITH SIBLING
 next.addEventListener('click', function(){
